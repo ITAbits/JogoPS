@@ -6,8 +6,6 @@ public class ShootableName : MonoBehaviour {
 	public Color destroyedColor;
 	public TextMesh text;
 
-	public ParticleSystem ps;
-
 	public MeshRenderer renderer;
 	public Collider collider;
 
@@ -19,7 +17,5 @@ public class ShootableName : MonoBehaviour {
 	{
 		//Check if health has fallen below zero
 		renderer.material.SetColor("_Color", destroyedColor);
-		ps.transform.position = position;
-		ps.Play();
 	}
 }

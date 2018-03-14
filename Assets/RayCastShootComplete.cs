@@ -16,6 +16,8 @@ public class RayCastShootComplete : MonoBehaviour
   private LineRenderer laserLine;                   // Reference to the LineRenderer component which will display our laserline
   private float nextFire;                       // Float to store the time the player will be allowed to fire again, after firing
 
+  public ParticleSystem ExplosionPrefab;
+
 
   void Start()
   {
@@ -74,11 +76,14 @@ public class RayCastShootComplete : MonoBehaviour
           // Add force to the rigidbody we hit, in the direction from which it was hit
           hit.rigidbody.AddTorque(Vector3.Cross(hit.point-hit.rigidbody.position, -hit.normal) * hitForce, ForceMode.Impulse);
         }
+
+        Instantiate(ExplosionPrefab, hit.point, Quaternion.identity);
       }
       else
       {
         // If we did not hit anything, set the end of the line to a position directly in front of the camera at the distance of weaponRange
         laserLine.SetPosition(1, rayOrigin + rayDirection * weaponRange);
+        //Instantiate(ExplosionPrefab, rayOrigin + rayDirection * weaponRange, Quaternion.identity);
       }
     }
   }

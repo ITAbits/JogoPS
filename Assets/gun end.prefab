@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1841830326837598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 0, z: 0}
+  m_LocalPosition: {x: -1.5, y: 0, z: 1.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -148,9 +148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunDamage: 1
   fireRate: 0.25
-  weaponRange: 20
+  weaponRange: 30
   hitForce: 100
   gunEnd: {fileID: 4502644414218122}
+  ExplosionPrefab: {fileID: 198691527444546966, guid: 4d681a82fba2f9b4c8211a5e4f97f93c,
+    type: 2}
 --- !u!120 &120501562273624364
 LineRenderer:
   m_ObjectHideFlags: 1
