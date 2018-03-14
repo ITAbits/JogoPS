@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1756379046881526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.33, y: 0.3, z: -0.82}
+  m_LocalPosition: {x: 0.33, y: 0.3, z: 8.53}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,7 +99,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1756379046881526}
-  m_Text: aaa
+  m_Text: Clique para comecar
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -107,7 +107,7 @@ TextMesh:
   m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 200
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 3d87fb17b0a95324db4ffbc6772e6e5a, type: 3}
   m_Color:
@@ -124,6 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5a2cd8e323b3b42a7f5a6c5d0e58a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 1
-  destroyedColor: {r: 1, g: 0, b: 0, a: 1}
+  destroyedColor: {r: 0.19852942, g: 0.19852942, b: 0.19852942, a: 1}
   text: {fileID: 102498992836462276}
+  renderer: {fileID: 23223779292978394}

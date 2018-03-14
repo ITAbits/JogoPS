@@ -23,7 +23,7 @@
 			{
 				// sample the texture
 				fixed4 col;
-				col.rgb = _Color.rgb * (1-tex2D(_MainTex, i.uv).rgb);
+				col.rgb = _Color.rgb * (1-tex2D(_MainTex, i.uv).rgb) * 10.0;
 				col.a = tex2D(_MainTex, i.uv).a;
 				// apply fog
 				UNITY_APPLY_FOG(i.fogCoord, col);

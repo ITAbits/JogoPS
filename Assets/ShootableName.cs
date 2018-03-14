@@ -7,7 +7,6 @@ public class ShootableName : MonoBehaviour {
 	public TextMesh text;
 
 	public MeshRenderer renderer;
-	public Collider collider;
 
 	public void Start() {
 		gameObject.AddComponent(typeof(BoxCollider));
