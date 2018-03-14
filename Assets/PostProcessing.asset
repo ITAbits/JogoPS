@@ -29,15 +29,15 @@ MonoBehaviour:
     m_Settings:
       excludeSkybox: 1
   antialiasing:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      method: 0
+      method: 1
       fxaaSettings:
         preset: 2
       taaSettings:
-        jitterSpread: 0.75
-        sharpen: 0.3
-        stationaryBlending: 0.95
+        jitterSpread: 0.788
+        sharpen: 1.462
+        stationaryBlending: 0.99
         motionBlending: 0.85
   ambientOcclusion:
     m_Enabled: 0
@@ -69,13 +69,13 @@ MonoBehaviour:
       screenEdgeMask:
         intensity: 0.03
   depthOfField:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
-      focusDistance: 30.73
-      aperture: 2.87
-      focalLength: 50.9
+      focusDistance: 10.13
+      aperture: 4.05
+      focalLength: 20.2
       useCameraFov: 0
-      kernelSize: 1
+      kernelSize: 3
   motionBlur:
     m_Enabled: 1
     m_Settings:
@@ -100,10 +100,10 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.36
-        threshold: 1.07
-        softKnee: 0.114
-        radius: 5.49
+        intensity: 0.27
+        threshold: 11.06
+        softKnee: 0
+        radius: 4.83
         antiFlicker: 1
       lensDirt:
         texture: {fileID: 0}
@@ -120,8 +120,8 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 0
-        temperature: -10.8
+        postExposure: -1.6
+        temperature: -13.1
         tint: 2.3
         hueShift: -2
         saturation: 1.148
@@ -284,7 +284,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.251
+      intensity: 0.348
   grain:
     m_Enabled: 0
     m_Settings:
