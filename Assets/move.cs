@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class move : MonoBehaviour {
+public class Move : MonoBehaviour {
 
 	// Use this for initialization
 	public float speed;
-	void Start () {
-		
-	}
+	public float acceleration = 2.0f;
+	private float realSpeed;
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position += Vector3.forward * speed * Time.deltaTime;
-		
+		if(realSpeed < speed) {
+			realSpeed += acceleration * Time.deltaTime;
+		}
+		transform.position += Vector3.forward * realSpeed * Time.deltaTime;
 	}
 }

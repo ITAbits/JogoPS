@@ -3,21 +3,23 @@ using System.Collections;
 
 public class ShootableName : MonoBehaviour {
 
-	//The box's current health point total
-	public int currentHealth = 3;
 	public Color destroyedColor;
 	public TextMesh text;
+
+	public ParticleSystem ps;
+
+	public MeshRenderer renderer;
+	public Collider collider;
 
 	public void Start() {
 		gameObject.AddComponent(typeof(BoxCollider));
 	}
 
-	public void Damage(int damageAmount)
+	public void Damage(Vector3 position)
 	{
-		//subtract damage amount when Damage function is called
-		currentHealth -= damageAmount;
-
 		//Check if health has fallen below zero
-		text.color = destroyedColor;
+		renderer.material.SetColor("_Color", destroyedColor);
+		ps.transform.position = position;
+		ps.Play();
 	}
 }

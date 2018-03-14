@@ -45,7 +45,6 @@ public class RayCastShootComplete : MonoBehaviour
       Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
 			Vector3 mouseWorldPos = fpsCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, fpsCam.nearClipPlane));
       Vector3 rayDirection = (mouseWorldPos - fpsCam.transform.position).normalized; 
-			Debug.Log(rayDirection);
 
       // Declare a raycast hit to store information about what our raycast has hit
       RaycastHit hit;
@@ -66,14 +65,14 @@ public class RayCastShootComplete : MonoBehaviour
         if (health != null)
         {
           // Call the damage function of that script, passing in our gunDamage variable
-          health.Damage(gunDamage);
+          health.Damage(hit.point);
         }
 
         // Check if the object we hit has a rigidbody attached
         if (hit.rigidbody != null)
         {
           // Add force to the rigidbody we hit, in the direction from which it was hit
-          hit.rigidbody.AddForce(-hit.normal * hitForce);
+          hit.rigidbody.AddTorque(Vector3.Cross(hit.point-hit.rigidbody.position, -hit.normal) * hitForce, ForceMode.Impulse);
         }
       }
       else

@@ -10,11 +10,13 @@ public class NameSpawner : MonoBehaviour {
 	public float radius = 1.0f;
 	public float minDistance = 5.0f;
 	public float maxDistance = 15.0f;
+
+	public float initialDistance = 10.0f;
 	// Use this for initialization
 	void Start () {
 		var text = Resources.Load<TextAsset>("bixos").ToString();
 		var bixos = Regex.Split(text, "\r\n|\r|\n");
-		var totalDistance = 0.0f;
+		var totalDistance = initialDistance;
 		for(int i = 0; i < bixos.Length; i++)
 		{
 			var bixo = bixos[i];
@@ -26,11 +28,6 @@ public class NameSpawner : MonoBehaviour {
 			totalDistance += dist;
 			floatingText.transform.position = new Vector3(circ.x, circ.y, posz);
 		}
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
 		
 	}
 }
